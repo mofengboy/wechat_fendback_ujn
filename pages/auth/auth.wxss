@@ -1,0 +1,12 @@
+.header{
+  margin-top:60rpx;
+  text-align: center;
+  width: 100%
+}
+.auth_button{
+  margin-top:50rpx;
+  text-align: center;
+}
+button{
+  width: 50%;
+}

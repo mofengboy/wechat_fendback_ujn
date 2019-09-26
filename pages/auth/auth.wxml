@@ -1,0 +1,8 @@
+<view>
+<view class="header">
+<image src="/asset/img/auth_logo.jpg"></image>
+</view>
+<view class="auth_button">
+<van-button round color="#7f8c8d" type="info" bind:click="wx_auth" open-type="getUserInfo">授权登陆</van-button>
+</view>
+</view>

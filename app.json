@@ -1,0 +1,15 @@
+{
+  "pages": [
+    "pages/wait/wait",
+    "pages/index/index",
+    "pages/auth/auth",
+    "pages/identity/identity"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "济南大学意见建议平台",
+    "navigationBarTextStyle": "black"
+  },
+  "sitemapLocation": "sitemap.json"
+}
