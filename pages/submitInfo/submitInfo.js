@@ -1,24 +1,12 @@
-// pages/identity/identity.js
+// pages/submitInfo/submitInfo.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    identity:0
-  },
 
-  /**
-   * 
-   * 自定义函数
-   * 
-   */
-  identity_change:function(event){
-    this.setData({
-      identity:event.detail.value
-    })
   },
-
 
   /**
    * 生命周期函数--监听页面加载

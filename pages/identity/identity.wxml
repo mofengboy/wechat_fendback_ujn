@@ -1,2 +1,17 @@
 <!--pages/identity/identity.wxml-->
-<text>pages/identity/identity.wxml</text>
+<view>
+<image class="bg" src="../../asset/img/bg1.jpg"></image>
+<view class="header">
+</view>
+<view class="main">
+<radio-group bindchange="identity_change" class="radio_group">
+  <radio name="0" value="0" class="radio_container">学生</radio>
+  <radio name="1" value="1" class="radio_container">老师</radio>
+</radio-group>
+</view>
+<view class="auth_button">
+<van-button round color="#7f8c8d" type="info" bind:click="wx_auth" open-type="getUserInfo">提交</van-button>
+</view>
+<view class="footer">
+</view>
+</view>

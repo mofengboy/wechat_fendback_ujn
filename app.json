@@ -1,9 +1,11 @@
 {
   "pages": [
+    "pages/identity/identity",
     "pages/wait/wait",
     "pages/index/index",
     "pages/auth/auth",
-    "pages/identity/identity"
+    
+    "pages/submitInfo/submitInfo"
   ],
   "window": {
     "backgroundTextStyle": "light",
