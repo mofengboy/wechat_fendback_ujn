@@ -5,49 +5,55 @@ App({
     检测用户是否已经授权并且已经选择身份
     如果已经授权跳转index页面
      */
-    // wx.getSetting({
-    //   success(res) {
-    //     let userInfo = res.authSetting["scope.userInfo"]
-    //     if(userInfo){
-    //       wx.navigateTo({
-      // 此处微信开始登陆
-    //         url: '/pages/index/index',
-    //       })
-    //     }else{
-    //       wx.navigateTo({
-    //         url: '/pages/auth/auth',
-    //       })
-    //     }
-    //   }
-    // })
-    wx.login({
-      success(res){
-        let code = res.code;
-        wx.getUserInfo({
-          success:function(res){
-            console.log(res);
-            let rawData = res.rawData;
-            let signature = res.signature;
-            let encryptedData = res.encryptedData;
-            let iv = res.iv;
-            wx.request({
-              url: 'http://suggestion.ujnxgzx.com/wxlogin/index/login',
-              method: "POST",
-              data: {
-                code: code,
-                rawData:rawData,
-                signature:signature,
-                encryptedData:encryptedData,
-                iv:iv
-              },
-              success(res) {
-                console.log(res);
-              }
-            })
-          }
-        })
+    wx.getSetting({
+      success(res) {
+        let userInfo = res.authSetting["scope.userInfo"]
+        if(userInfo){
+          /*
+          *此时发送登陆请求
+          */
+          wx.login({
+            success(res) {
+              let code = res.code;
+              wx.getUserInfo({
+                success: function (res) {
+                  console.log(res);
+                  let rawData = res.rawData;
+                  let signature = res.signature;
+                  let encryptedData = res.encryptedData;
+                  let iv = res.iv;
+                  wx.request({
+                    url: 'http://suggestion.ujnxgzx.com/wxlogin/index/login',
+                    method: "POST",
+                    header: {
+                      'content-type': 'application/json'
+                    },
+                    data: {
+                      code: code,
+                      rawData: rawData,
+                      signature: signature,
+                      encryptedData: encryptedData,
+                      iv: iv
+                    },
+                    success(res) {
+                      console.log(res);
+                    }
+                  })
+                }
+              })
+            }
+          })
+          wx.navigateTo({
+            url: '/pages/index/index',
+          })
+        }else{
+          wx.navigateTo({
+            url: '/pages/auth/auth',
+          })
+        }
       }
     })
+    
   },
   globalData: {
     userInfo: null
