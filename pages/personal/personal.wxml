@@ -1,21 +1,4 @@
 <!--pages/personal/personal.wxml-->
-<view class="container">
-  <view class="userinfo">
-    <block wx:if="{{userInfo.userName == null}}">
-    <open-data type='userAvatarUrl' class="userinfo-avatar" background-size="cover"></open-data>
-      <view class='user-name'>
-        <text class="userinfo-nickname">{{realName}}</text>
-      </view>
-    </block>
-    <block wx:else>
-      <image class="userinfo-avatar" src="{{userInfo.userFigure}}" background-size="cover" ></image>
-      <view class='user-name'>
-        <text class="userinfo-nickname">{{userInfo.userName}}</text>
-        <image class='edit-pic' bindtap='toMyUserInfo' src='/images/icon/edit.png'></image>
-      </view>
-    </block>
-  </view>
-</view>
 <view>
   <van-cell title="单元格" is-link link-type="navigateTo"
   url="" />

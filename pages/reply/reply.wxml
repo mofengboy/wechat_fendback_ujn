@@ -1,6 +1,8 @@
-<view>
-  <h1>意见回复：</h1>
-  <textarea name = "content" class="textarea" placeholder="请输入：" maxlength='300'  value='{{content}}'>
+<view class='leave'>
+<h1>意见回复：</h1>
+<form bindsubmit='confirm' class="bk">
+  <textarea name = "content" class="textarea" placeholder="请输入：" maxlength='500'  value='{{content}}'>
   </textarea>
-  <van-button round class='btn' form-type='submit'>提 交</van-button>
+  </form>
+   <van-button round class='btn' form-type='submit'>提 交</van-button>
 </view>
