@@ -10,7 +10,7 @@ page{
   width: 90%;
   height: 90%;
   margin: auto;
-  margin-top:1em
+  padding-top:1em;
 }
 .bk {
   border: 2rpx solid #ccc;
