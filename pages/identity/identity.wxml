@@ -5,8 +5,8 @@
 </view>
 <view class="main">
 <radio-group bindchange="identity_change" class="radio_group">
-  <radio name="0" value="0" class="radio_container">学生</radio>
-  <radio name="1" value="1" class="radio_container">老师</radio>
+  <radio name="1" value="1" class="radio_container">学生</radio>
+  <radio name="2" value="2" class="radio_container">老师</radio>
 </radio-group>
 </view>
 <view class="auth_button">
