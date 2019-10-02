@@ -24,10 +24,10 @@ Page({
       success: res => {
         console.log(this.data)
         wx.request({
-          url: '',
+          url: 'https://suggestion.ujnxgzx.com/user/teacher/getSuggestionsNoReply',
           method: 'POST',
-          data: {
-            session: res,
+          header: {
+            "session": res.data
           },
           success: res => {
             console.log(res);

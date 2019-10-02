@@ -18,10 +18,12 @@ Page({
       success: res => {
         console.log(this.data)
         wx.request({
-          url: '',
+          url: 'https://suggestion.ujnxgzx.com/user/teacher/replaySuggestion',
           method: 'POST',
+          header: {
+            "session": res.data
+          },
           data: {
-            session: res,
             id: options.id,
             reply: e.detail.value.content
           },

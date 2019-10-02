@@ -18,10 +18,12 @@ Page({
       success: res => {
         console.log(this.data)
         wx.request({
-          url: '',
+          url: 'https://suggestion.ujnxgzx.com/user/index/getSingleSuggestion',
           method: 'GET',
+          header: {
+            "session": res.data
+          },
           data: {
-            session: res,
             id: options.id,
           },
           success: res => {
