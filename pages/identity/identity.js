@@ -1,4 +1,5 @@
 // pages/identity/identity.js
+import Toast from '../../miniprogram_npm/vant-weapp/toast/toast';
 Page({
 
   /**
@@ -34,10 +35,13 @@ Page({
             'type': _this.data.identity
           },
           success(res){
-            console.log(res)
-            wx.navigateTo({
-              url: '/pages/submitInfo/submitInfo',
-            })
+            if(res.statusCode==200){
+              Toast('你已经进行身份认证，正在跳转首页');
+              wx.navigateTo({
+                url: '/pages/submitInfo/submitInfo',
+              })
+            }
+            
           }
         })
       },
@@ -74,10 +78,30 @@ Page({
               },
               success(res) {
                 // 全局session,保存storage中
-                let session = res.data.data.sessionKey;
+                let session = res.data.data.session3rd;
                 wx.setStorage({
                   key: 'session',
                   data: session,
+                })
+
+ /*
+   * 检测是否已经选择身份
+   */
+                wx.request({
+                  url: 'https://suggestion.ujnxgzx.com/index/index/judgeIfSelect',
+                  method: "GET",
+                  header: {
+                    'session': session
+                  },
+                  success(res) {
+                    // 已经选择身份跳转首页
+                    if (res.statusCode == 200) {
+
+                      wx.navigateTo({
+                        url: '/pages/index/index',
+                      })
+                    }
+                  }
                 })
               }
             })
@@ -85,13 +109,15 @@ Page({
         })
       }
     })
+   
+
   },
 
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
   onReady: function () {
-
+   
   },
 
   /**

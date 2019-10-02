@@ -39,7 +39,7 @@ App({
                       let status = res.data.data.status;
 
                       // 全局session,保存storage中
-                      let session = res.data.data.sessionKey;
+                      let session = res.data.data.session3rd;
                       wx.setStorage({
                         key: 'session',
                         data: session,
