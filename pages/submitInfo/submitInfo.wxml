@@ -1,2 +1,38 @@
-<!--pages/submitInfo/submitInfo.wxml-->
-<text>pages/submitInfo/submitInfo.wxml</text>
+<!--pages/identity/identity.wxml-->
+<view>
+<image class="bg" src="../../asset/img/bg1.jpg"></image>
+<view class="header">
+</view>
+<view class="main">
+<view class="sno">
+<van-cell-group>
+  <van-field
+    value="{{sno}}"
+    required
+    type="number"
+    clearable
+    label="学号/工号"
+    placeholder="请输入学号/工号"
+    bind:change="sno_change"
+  />
+</van-cell-group>
+</view>
+<view class="name">
+<van-cell-group>
+  <van-field
+    value="{{name}}"
+    label="姓名"
+    placeholder="请输入姓名"
+    required
+    border="{{false}}"
+    bind:change="name_change"
+  />
+</van-cell-group>
+</view>
+</view>
+<view class="auth_button">
+<van-button round color="#7f8c8d" type="info" bind:click="sunmiit_info" open-type="getUserInfo">提交</van-button>
+</view>
+<view class="footer">
+</view>
+</view>

@@ -1,10 +1,12 @@
 {
   "pages": [
+"pages/wait/wait",
+"pages/submitInfo/submitInfo",
     "pages/identity/identity",
-    "pages/wait/wait",
+    
     "pages/index/index",
     "pages/auth/auth",
-    "pages/submitInfo/submitInfo",
+    
     "pages/check/check"
   ],
   "window": {

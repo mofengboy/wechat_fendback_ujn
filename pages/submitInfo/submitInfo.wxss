@@ -1,1 +1,42 @@
-/* pages/submitInfo/submitInfo.wxss */
+.bg{
+  width: 100%;
+  height: 100%;
+  position:fixed; 
+  background-size:100% 100%;
+  z-index: -1;
+}
+.header{
+  margin-top: 0;
+  width:750rpx;
+}
+.footer{
+  position: fixed;
+  bottom: 0px;
+  width:750rpx;
+}
+.img{
+  width: 750rpx;
+  height: 150rpx;
+}
+.main{
+  margin: 0 auto;
+  width: 80%;
+  padding-top: 300rpx;
+}
+.radio_container{
+  width: 300rpx;
+}
+.radio_group{
+  font-size: 50rpx;
+  padding-left: 150rpx;
+}
+.auth_button{
+  padding-top: 250rpx;
+  text-align: center;
+}
+button{
+  width: 50%;
+}
+.name{
+  padding-top: 50rpx;
+}

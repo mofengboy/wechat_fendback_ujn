@@ -17,7 +17,6 @@ App({
               let code = res.code;
               wx.getUserInfo({
                 success: function (res) {
-                  console.log(res);
                   let rawData = res.rawData;
                   let signature = res.signature;
                   let encryptedData = res.encryptedData;
@@ -36,7 +35,15 @@ App({
                       iv: iv
                     },
                     success(res) {
-                      console.log(res);
+                      // 是否完成身份认证
+                      let status = res.data.data.status;
+
+                      // 全局session,保存storage中
+                      let session = res.data.data.sessionKey;
+                      wx.setStorage({
+                        key: 'session',
+                        data: session,
+                      })
                     }
                   })
                 }

@@ -5,7 +5,53 @@ Page({
    * 页面的初始数据
    */
   data: {
+    sno:'',
+    name:''
+  },
 
+  /**
+   * 
+   * 自定义函数
+   * 
+   */
+  // 实时改变输入到data的数据
+  sno_change:function(event){
+    this.setData({
+      sno: event.detail
+    })
+  },
+  name_change: function (event) {
+    this.setData({
+      name: event.detail
+    })
+  },
+
+  //
+  sunmiit_info:function(){
+    let _this = this;
+    wx.getStorage({
+      key: 'session',
+      success: function(res) {
+        let session  = res.data;
+        wx.request({
+          url: 'http://suggestion.ujnxgzx.com/index/index/testing',
+          method:"GET",
+          header:{
+            'session':session
+          },
+          data:{
+            sno: _this.data.sno,
+            name: _this.data.name
+          },
+          success(res){
+            console.log(res);
+            wx.navigateTo({
+              url: '/pages/index/index',
+            })
+          }
+        })
+      },
+    })
   },
 
   /**

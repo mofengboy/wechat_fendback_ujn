@@ -20,6 +20,12 @@ Page({
   },
 
 
+
+  wx_auth:function(){
+    wx.navigateTo({
+      url: '/pages/submitInfo/submitInfo',
+    })
+  },
   /**
    * 生命周期函数--监听页面加载
    */
