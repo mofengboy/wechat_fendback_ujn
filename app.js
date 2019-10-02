@@ -36,8 +36,15 @@ App({
                     },
                     success(res) {
                       // 是否完成身份认证
-                      let status = res.data.data.status;
-
+                      let status_code = res.data.data.status;
+                      console.log(status_code);
+                      // 未选择身份返回授权页面
+                      if (status_code!= 200) {
+                        wx.navigateTo({
+                          url: '/pages/auth/auth',
+                        })
+                      }
+                   
                       // 全局session,保存storage中
                       let session = res.data.data.session3rd;
                       wx.setStorage({

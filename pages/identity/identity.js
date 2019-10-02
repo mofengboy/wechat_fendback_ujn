@@ -35,8 +35,9 @@ Page({
             'type': _this.data.identity
           },
           success(res){
+
             if(res.statusCode==200){
-              Toast('你已经进行身份认证，正在跳转首页');
+             
               wx.navigateTo({
                 url: '/pages/submitInfo/submitInfo',
               })
@@ -94,9 +95,10 @@ Page({
                     'session': session
                   },
                   success(res) {
+                    console.log(res)
                     // 已经选择身份跳转首页
-                    if (res.statusCode == 200) {
-
+                    if (res.data.statusCode == 200) {
+                      Toast('你已经进行身份认证，正在跳转首页');
                       wx.navigateTo({
                         url: '/pages/index/index',
                       })

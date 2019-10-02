@@ -29,7 +29,7 @@ Page({
           },
           success(res){
             // 未选择身份返回授权页面
-            if(res.statusCode!=200){
+            if (res.data.statusCode!=200){
               wx.navigateTo({
                 url: '/pages/auth/auth',
               })
