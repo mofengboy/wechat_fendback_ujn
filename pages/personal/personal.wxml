@@ -1,0 +1,11 @@
+<!--pages/personal/personal.wxml-->
+<view class='leave'>
+  <van-cell title="单元格" is-link link-type="navigateTo"
+  url="" />
+   <van-cell title="单元格" is-link link-type="navigateTo"
+  url="" />
+   <van-cell title="单元格" is-link link-type="navigateTo"
+  url="" />
+   <van-cell title="单元格" is-link link-type="navigateTo"
+  url="" />
+</view>
