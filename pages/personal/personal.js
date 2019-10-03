@@ -25,7 +25,7 @@ Page({
         console.log(this.data)
         wx.request({
           url: 'https://suggestion.ujnxgzx.com/user/teacher/getSuggestionsNoReply',
-          method: 'POST',
+          method: 'GET',
           header: {
             "session": res.data
           },
