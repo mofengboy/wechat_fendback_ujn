@@ -221,5 +221,17 @@ Page({
    */
   onShareAppMessage: function () {
 
+  },
+  onChange: function (e) {
+    let jumpUrl = "/pages/index/index";
+    switch (e.detail) {
+      case 0: jumpUrl = "/pages/index/index";
+        break;
+      case 1: jumpUrl = "/pages/personal/personal";
+        break;
+    }
+    wx.reLaunch({
+      url: jumpUrl,
+    })
   }
 })

@@ -5,7 +5,8 @@ Page({
    * 页面的初始数据
    */
   data: {
-
+    title:'',
+    suggestion:''
   },
 
   /**
@@ -28,16 +29,19 @@ Page({
             },
             success: res => {
              console.log(res);
-              if (res.statusCode == 200) {
-                that.setData({
-                  title: res.title,
-                  suggestion:res.suggestion,
-                })
-              }
+              let info = res.data.data;
+              _this.setData({
+                info: info
+              });
             }
           })
         }
       })
+  },
+  reply: function (e) {
+    wx.navigateTo({
+      url: '/pages/reply/reply?id={{info.id}}',
+    })
   },
 
   /**

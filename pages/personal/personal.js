@@ -5,13 +5,13 @@ Page({
    * 页面的初始数据
    */
   data: {
+    active: 1,
     content: ''
   },
   /**
    * 自定义函数
    * 
    */
-
 
 
   /**
@@ -31,6 +31,10 @@ Page({
           },
           success: res => {
             console.log(res);
+            let info = res.data.data;
+            _this.setData({
+              info: info
+            });
           }
         })
       }
@@ -84,5 +88,19 @@ Page({
    */
   onShareAppMessage: function () {
 
+  },
+
+  onChange: function (e) {
+    let jumpUrl = "/pages/personal/personal";
+    switch (e.detail) {
+      case 0: jumpUrl = "/pages/index/index";
+        break;
+      case 1: jumpUrl = "/pages/personal/personal";
+        break;
+    }
+    wx.reLaunch({
+      url: jumpUrl,
+    })
   }
+  
 })
