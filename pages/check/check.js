@@ -5,7 +5,8 @@ Page({
    * 页面的初始数据
    */
   data: {
-
+    title:'',
+    suggestion:''
   },
 
   /**
@@ -28,12 +29,10 @@ Page({
             },
             success: res => {
              console.log(res);
-              if (res.statusCode == 200) {
-                this.setData({
-                  title: res.title,
-                  suggestion:res.suggestion,
-                })
-              }
+              let info = res.data.data;
+              _this.setData({
+                info: info
+              });
             }
           })
         }
@@ -41,7 +40,7 @@ Page({
   },
   reply: function (e) {
     wx.navigateTo({
-      url: '/pages/reply/reply',
+      url: '/pages/reply/reply?id={{info.id}}',
     })
   },
 

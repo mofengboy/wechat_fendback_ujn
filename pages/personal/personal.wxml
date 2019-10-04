@@ -2,7 +2,7 @@
 <view class='leave'>
 <block wx:for="{{info}}" wx:key="{{item.id}}">
 <van-cell title="{{item.title}}" is-link link-type="navigateTo"
-  url="/pages/check/check" value="{{item.time}}" />
+  url='../check/check?id={{item.id}}' value="{{item.time}}" />
 </block>
 <view class="footer">
 <van-tabbar active="{{active}}" bind:change="onChange">

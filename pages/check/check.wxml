@@ -3,7 +3,7 @@
 <h1>查看意见建议</h1>
 <form bindsubmit='confirm' class="back" >
 <view class="bk" >
-  <textarea name = "content" class="textarea" placeholder="主题：{{title}} 内容：{{suggestion}}" maxlength='500'>
+  <textarea name = "content" class="textarea" placeholder="{{info.suggestion}}" maxlength='500'>
   </textarea>
   </view>
    <van-button round color="#7f8c8d" class="btn" form-type='submit' catchtap="reply">回 复</van-button>
