@@ -5,7 +5,8 @@ Page({
    * 页面的初始数据
    */
   data: {
-    
+    active: 0,
+    info:''
   },
 
   /**
@@ -13,6 +14,10 @@ Page({
    * 自定义函数
    * 
    */
+  // event.detail 的值为当前选中项的索引
+  onChange(event) {
+    console.log(event.detail);
+  },
   
   /**
    * 生命周期函数--监听页面加载
@@ -45,6 +50,29 @@ Page({
    * 生命周期函数--监听页面初次渲染完成
    */
   onReady: function () {
+    let _this = this;
+    /*
+    * 老师获取未回复建议
+    */
+    wx.getStorage({
+      key: 'session',
+      success: function(res) {
+        wx.request({
+          url: 'https://suggestion.ujnxgzx.com/user/teacher/getSuggestionsNoReply',
+          method: 'GET',
+          header: {
+            'session':res.data
+      },
+          success: function (res) {
+            let info = res.data.data;
+            _this.setData({
+              info: info
+            });
+            console.log(info)
+          }
+        })
+      },
+    })
     
   },
 
