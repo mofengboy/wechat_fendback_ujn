@@ -227,7 +227,7 @@ Page({
     switch (e.detail) {
       case 0: jumpUrl = "/pages/index/index";
         break;
-      case 1: if(this.data.is_teacher!= true){
+      case 1: if(this.data.is_teacher == true){
         jumpUrl = "/pages/personal/personal";
         }else
         jumpUrl = "/pages/details/details";
