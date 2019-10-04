@@ -1,12 +1,14 @@
 // pages/check/check.js
 Page({
-
+  
   /**
    * 页面的初始数据
    */
   data: {
     title:'',
-    suggestion:''
+    suggestion:'',
+    reply_id:'',
+
   },
 
   /**
@@ -14,6 +16,7 @@ Page({
    */
   onLoad: function (options) {
       let _this = this;
+    console.log(options.id);
       wx.getStorage({
         key: 'session',
         success: res => {
@@ -29,6 +32,7 @@ Page({
             },
             success: res => {
              console.log(res);
+              this.reply_id = options.id;
               let info = res.data.data;
               _this.setData({
                 info: info
@@ -38,9 +42,9 @@ Page({
         }
       })
   },
-  reply: function (e) {
+  reply: function () {
     wx.navigateTo({
-      url: '/pages/reply/reply?id={{info.id}}',
+      url: '/pages/reply/reply?id=' + this.reply_id,
     })
   },
 
