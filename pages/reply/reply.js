@@ -28,14 +28,14 @@ Page({
             reply: e.detail.value.content
           },
           success: res => {
-            if (res == 0) {
+            if (res.data.statusCode != 200) {
               wx.showToast({
                 title: '提交成功',
                 icon: 'success',
                 duration: 1500
               })
               setTimeout(function () {
-                wx.navigateBack({})
+                wx.navigateBack({delta :2})
               }, 1500)
             }
           }
