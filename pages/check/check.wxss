@@ -6,6 +6,9 @@ page{
   background-repeat: no-repeat;
   background-size: 100%;
 }
+h1{
+  color:white;
+}
 .textarea {
   font-size: 40rpx;
   width: 90%;

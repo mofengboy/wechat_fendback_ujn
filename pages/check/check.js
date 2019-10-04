@@ -29,7 +29,7 @@ Page({
             success: res => {
              console.log(res);
               if (res.statusCode == 200) {
-                that.setData({
+                this.setData({
                   title: res.title,
                   suggestion:res.suggestion,
                 })
