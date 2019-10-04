@@ -1,8 +1,7 @@
 <!--pages/personal/personal.wxml-->
 <view class='leave'>
 <block wx:for="{{info}}" wx:key="{{item.id}}">
-<van-cell title="{{item.title}}" is-link link-type="navigateTo"
-  url='../check/check?id={{item.id}}' value="{{item.time}}" />
+<van-cell title="{{item.title}}" label="{{item.suggestion}}" value="{{item.reply}}" />
 </block>
 <view class="footer">
 <van-tabbar active="{{active}}" bind:change="onChange">

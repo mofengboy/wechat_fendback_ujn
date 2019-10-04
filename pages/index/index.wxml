@@ -4,7 +4,8 @@
 <!-- 老师 -->
 <view class="list" wx:if="{{is_teacher}}">
 <block wx:for="{{info}}" wx:key="{{item.id}}">
-<van-cell title="{{item.title}}" is-link value="{{item.time}}" />
+<van-cell title="{{item.title}}" is-link link-type="navigateTo"
+  url='../check/check?id={{item.id}}' value="{{item.time}}" />
 </block>
 </view>
 <!-- 学生 -->

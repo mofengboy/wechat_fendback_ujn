@@ -24,7 +24,7 @@ Page({
       success: res => {
         console.log(this.data)
         wx.request({
-          url: 'https://suggestion.ujnxgzx.com/user/teacher/getSuggestionsNoReply',
+          url: 'https://suggestion.ujnxgzx.com/user/teacher/getAllReply',
           method: 'GET',
           header: {
             "session": res.data
