@@ -1,9 +1,11 @@
 <!--pages/check/check.wxml-->
 <view class='leave'>
 <h1>查看意见建议</h1>
-<form bindsubmit='confirm' class="bk">
-  <textarea name = "content" class="textarea" placeholder="请输入：" disabled="disabled" maxlength='500' >
+<form bindsubmit='confirm' class="back" >
+<view class="bk" >
+  <textarea name = "content" class="textarea" placeholder="主题：{{title}} 内容：{{suggestion}}" maxlength='500'>
   </textarea>
+  </view>
+   <van-button round color="#7f8c8d" class="btn" form-type='submit'>回 复</van-button>
   </form>
-   <van-button round class='btn' form-type='submit'>回 复</van-button>
 </view>
