@@ -1,9 +1,41 @@
-<view>
-<view class="list">
+<view class="bg">
+<van-dialog id="van-dialog" />
+<image class="bg" src="../../asset/img/index_bg.jpg"></image>
+<!-- 老师 -->
+<view class="list" wx:if="{{is_teacher}}">
 <block wx:for="{{info}}" wx:key="{{item.id}}">
 <van-cell title="{{item.title}}" is-link value="{{item.time}}" />
 </block>
 </view>
+<!-- 学生 -->
+<view class="student" wx:if="{{!is_teacher}}">
+<view class="title_lable">意见反馈：</view>
+<view class="title">
+<van-field
+    required
+    label="主题"
+    value="{{ title }}"
+    placeholder="请输入主题"
+    border="{{ true }}"
+    bind:change="titleChange"
+  />
+</view>
+<view class="content">
+<van-field
+    required
+    label="内容"
+    type="textarea"
+    value="{{ content }}"
+    placeholder="\n\n请输入意见"
+    border="{{ true }}"
+    bind:change="contentChange"
+  />
+</view>
+<view class="feedback_button">
+<van-button round color="#7f8c8d" type="info" bind:click="subSuggestion">提交</van-button>
+</view>
+</view>
+<!-- 底部tarbar -->
 <view class="footer">
 <van-tabbar active="{{active}}" bind:change="onChange">
   <van-tabbar-item icon="home-o">首页</van-tabbar-item>
