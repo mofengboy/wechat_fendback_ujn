@@ -6,7 +6,7 @@
   </textarea>
 </form>
 <form bindsubmit='confirm' class="bk">
-  <textarea class="textarea" disabled="disabled" placeholder="{{info.reply}}" maxlength='500'>
+  <textarea class="textarea" disabled="disabled" placeholder="回复：{{info.reply}}" maxlength='500'>
   </textarea>
 </form>
 </view>
