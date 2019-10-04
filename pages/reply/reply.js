@@ -27,6 +27,7 @@ Page({
       success: res => {
         console.log(_this.data);
         console.log(this.data.content);
+        if (this.data.content){
         wx.request({
           url: 'https://suggestion.ujnxgzx.com/user/teacher/replaySuggestion',
           method: 'POST',
@@ -50,6 +51,7 @@ Page({
             }
           }
         })
+        }
       }
     })
   },
