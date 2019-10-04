@@ -1,9 +1,9 @@
 <!--pages/personal/personal.wxml-->
 <view class='leave'>
   <van-cell title="单元格" is-link link-type="navigateTo"
-  url="" />
+  url="/pages/check/check" />
    <van-cell title="单元格" is-link link-type="navigateTo"
-  url="" />
+  url="/pages/reply_received/reply_received" />
    <van-cell title="单元格" is-link link-type="navigateTo"
   url="" />
    <van-cell title="单元格" is-link link-type="navigateTo"
