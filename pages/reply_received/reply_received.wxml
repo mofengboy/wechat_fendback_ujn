@@ -2,7 +2,7 @@
 <view class='leave'>
 <h1>查看回复</h1>
 <form bindsubmit='confirm' class="bk">
-  <textarea name = "content" class="textarea" placeholder="{{info.suggestion}}" maxlength='500'>
+  <textarea name = "content" class="textarea" placeholder="{{info.suggestion}}" disabled="disabled"maxlength='500'>
   </textarea>
 </form>
 <form bindsubmit='confirm' class="bk">
