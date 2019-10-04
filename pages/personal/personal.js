@@ -13,7 +13,6 @@ Page({
    */
 
 
-
   /**
    * 生命周期函数--监听页面加载
    */
@@ -31,6 +30,10 @@ Page({
           },
           success: res => {
             console.log(res);
+            let info = res.data.data;
+            _this.setData({
+              info: info
+            });
           }
         })
       }
