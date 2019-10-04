@@ -37,9 +37,8 @@ App({
                     success(res) {
                       // 是否完成身份认证
                       let status_code = res.data.data.status;
-                      console.log(status_code);
                       // 未选择身份返回授权页面
-                      if (status_code!= 200) {
+                      if (!status_code) {
                         wx.navigateTo({
                           url: '/pages/auth/auth',
                         })
