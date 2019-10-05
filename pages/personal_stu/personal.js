@@ -1,4 +1,4 @@
-// pages/details/details.js
+// pages/personal/personal.js
 Page({
 
   /**
@@ -18,13 +18,23 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+    var that = this;
+    wx.getUserInfo({
+      success(res) {
+        console.log(res);
+        that.setData({
+          userInfo: res.userInfo,
+          nickName: res.userInfo.nickName
+        })
+      }
+    })
     let _this = this;
     wx.getStorage({
       key: 'session',
       success: res => {
         console.log(this.data)
         wx.request({
-          url: 'https://suggestion.ujnxgzx.com/user/teacher/getAllReply',
+          url: 'https://suggestion.ujnxgzx.com/user/index/getAllSuggestion',
           method: 'GET',
           header: {
             "session": res.data
@@ -102,5 +112,5 @@ Page({
       url: jumpUrl,
     })
   }
-
+  
 })

@@ -5,6 +5,8 @@
   <textarea name = "content" class="textarea" placeholder="请输入：" maxlength='500' bindblur='bindTextAreaBlur' value='{{content}}'>
   </textarea>
   </view>
+  <view class="btn">
    <van-button round color="#7f8c8d" class="btn" bind:click="confirm" form-type='submit'>提 交</van-button>
+   </view>
   </form>
 </view>

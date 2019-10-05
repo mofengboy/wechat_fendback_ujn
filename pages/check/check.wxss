@@ -9,6 +9,12 @@ page{
 h1{
   color:white;
 }
+.input{
+  margin: auto;
+  width: 90%;
+  padding-top:0.5em;
+  font-size: 40rpx;
+}
 .textarea {
   font-size: 40rpx;
   width: 90%;
@@ -24,9 +30,17 @@ h1{
   border: 2rpx solid #ccc;
   border-radius: 10px;
   width: 100%;
-  height: 80%;
+  height: 70%;
   background-color: white;
-  
+  margin-bottom: 10rpx;
+}
+.bk1 {
+  border: 2rpx solid #ccc;
+  border-radius: 10px;
+  width: 100%;
+  height: 8%;
+  background-color: white;
+   margin-bottom: 10rpx;
 }
 .leave {
   display: flex;
@@ -37,6 +51,10 @@ h1{
   height: 100vh;
 }
 .btn{
-  margin-top: 25px;
-  display: flex;
+  margin: 40rpx auto;
+  text-align: center;
+  width: 50%;
+}
+button{
+  width: 100%;
 }

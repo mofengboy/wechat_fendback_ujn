@@ -5,7 +5,9 @@
     "pages/identity/identity",
     "pages/index/index",
     "pages/auth/auth",
-    "pages/check/check"
+    "pages/check/check",
+    "pages/personal/personal",
+    "pages/personal_stu/personal"
   ],
   "window": {
     "backgroundTextStyle": "light",

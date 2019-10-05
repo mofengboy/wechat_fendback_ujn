@@ -7,11 +7,13 @@
     <view class='student'>
       <view class='name'>{{userInfo.nickName}}
         </view>
-      <view class='role'>老师</view>
+      <view class='role'>学生</view>
     </view>
   </view>
-<van-cell class="center" title="查看所有回复" is-link link-type="navigateTo"
-  url='../details/details'/>
+<block  wx:for="{{info}}" wx:key="{{item.id}}">
+<van-cell class="center" title="{{item.title}}" is-link link-type="navigateTo"
+  url='../reply_recived/reply_recived?id={{item.id}}' value="{{item.time}}"/>
+</block>
 <view class="footer">
 <van-tabbar active="{{active}}" bind:change="onChange">
   <van-tabbar-item icon="home-o">首页</van-tabbar-item>

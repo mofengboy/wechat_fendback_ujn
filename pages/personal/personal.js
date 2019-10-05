@@ -18,6 +18,16 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+    var that = this;
+    wx.getUserInfo({
+      success(res) {
+        console.log(res);
+        that.setData({
+          userInfo: res.userInfo,
+          nickName: res.userInfo.nickName
+        })
+      }
+    })
     let _this = this;
     wx.getStorage({
       key: 'session',

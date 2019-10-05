@@ -230,7 +230,7 @@ Page({
       case 1: if(this.data.is_teacher == true){
         jumpUrl = "/pages/personal/personal";
         }else
-        jumpUrl = "/pages/details/details";
+        jumpUrl = "/pages/personal_stu/personal";
         break;
     }
     wx.reLaunch({
