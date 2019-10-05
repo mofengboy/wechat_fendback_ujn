@@ -1,6 +1,6 @@
 <view class="bg">
 <van-dialog id="van-dialog" />
-<image class="bg" src="../../asset/img/index_bg.jpg"></image>
+<image class="bg" src="https://suggestion.ujnxgzx.com/static/img/index_bg.jpg"></image>
 <!-- 老师 -->
 <view class="list" wx:if="{{is_teacher}}">
 <view class="teacher_title">待回复的意见或建议：</view>

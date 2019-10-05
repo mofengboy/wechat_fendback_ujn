@@ -1,6 +1,6 @@
 <!--pages/identity/identity.wxml-->
 <view>
-<image class="bg" src="../../asset/img/bg1.jpg"></image>
+<image class="bg" src="https://suggestion.ujnxgzx.com/static/img/bg1.jpg"></image>
 <view class="header">
 </view>
 <view class="main">
