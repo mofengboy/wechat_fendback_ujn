@@ -1,4 +1,5 @@
 <view class='leave'>
+<image class="bg" src="https://suggestion.ujnxgzx.com/static/img/6.jpg"></image>
 <h1>意见回复：</h1>
 <form bindsubmit='confirm' class="back" >
 <view class="bk" >
