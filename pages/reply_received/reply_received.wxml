@@ -1,6 +1,6 @@
 <!--pages/reply_received/reply_received.wxml-->
 <view class='leave'>
-<image class="bg" src="https://suggestion.ujnxgzx.com/static/img/6.jpg"></image>
+<image class="bg" src="https://suggestion.ujnxgzx.com/static/img/index_bg.jpg"></image>
 <h1>查看回复</h1>
 <form bindsubmit='confirm' class="bk">
   <textarea name = "content" class="textarea" placeholder="{{info.suggestion}}" disabled="disabled"maxlength='500'>

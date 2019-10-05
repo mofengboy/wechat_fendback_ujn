@@ -6,9 +6,6 @@
   background-size:100% 100%;
   z-index: -1;
 }
-h1{
-  color:white;
-}
 .input{
   margin: auto;
   width: 90%;

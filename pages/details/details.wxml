@@ -1,6 +1,6 @@
 <!--pages/details/details.wxml-->
 <scroll-view scroll-y="true" class="container notify withtab">
-<image class="bg" src="https://suggestion.ujnxgzx.com/static/img/6.jpg"></image>
+<image class="bg" src="https://suggestion.ujnxgzx.com/static/img/index_bg.jpg"></image>
   <view class="ctnt0">
     <view class="notify-item flex-wrp" wx:for="{{info}}" wx:key="{{item.id}}">
       <view class="notify-content flex-item">
