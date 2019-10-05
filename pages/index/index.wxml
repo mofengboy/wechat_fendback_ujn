@@ -3,8 +3,9 @@
 <image class="bg" src="../../asset/img/index_bg.jpg"></image>
 <!-- 老师 -->
 <view class="list" wx:if="{{is_teacher}}">
+<view class="teacher_title">待回复的意见或建议：</view>
 <block wx:for="{{info}}" wx:key="{{item.id}}">
-<van-cell title="{{item.title}}" is-link link-type="navigateTo"
+<van-cell  class="list_item" title="{{item.title}}" is-link link-type="navigateTo"
   url='../check/check?id={{item.id}}' value="{{item.time}}" />
 </block>
 </view>

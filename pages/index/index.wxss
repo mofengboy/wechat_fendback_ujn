@@ -28,10 +28,10 @@
 }
 
 .student{
-  margin-top: 100rpx;
+  margin-top: 50rpx;
 }
 .title_lable{
-  margin: 20rpx;
+  margin: 20rpx 70rpx;
   font-size: 60rpx;
 }
 
@@ -46,7 +46,7 @@
 }
 .content textarea{
   padding-top:10rpx;
-  min-height: 400rpx;
+  min-height: 500rpx;
 }
 .feedback_button{
   margin: 40rpx auto;
@@ -55,4 +55,15 @@
 }
 button{
   width: 100%;
+}
+.list{
+  margin: 20rpx auto;
+  width: 90%
+}
+.list_item{
+  margin: 10rpx auto;
+}
+.teacher_title{
+  margin: 30rpx 10rpx;
+  font-size: 45rpx;
 }
