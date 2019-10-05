@@ -12,7 +12,7 @@
   </view>
 <block  wx:for="{{info}}" wx:key="{{item.id}}">
 <van-cell class="center" title="{{item.title}}" is-link link-type="navigateTo"
-  url='../reply_recived/reply_recived?id={{item.id}}' value="{{item.time}}"/>
+  url='../reply_received/reply_received?id={{item.id}}' value="{{item.time}}"/>
 </block>
 <view class="footer">
 <van-tabbar active="{{active}}" bind:change="onChange">
