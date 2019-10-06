@@ -12,10 +12,9 @@
       <view class='role'>学生</view>
     </view>
   </view>
-<block  wx:for="{{info}}" wx:key="{{item.id}}">
-<van-cell class="center" title="{{item.title}}" is-link link-type="navigateTo"
-  url='../reply_received/reply_received?id={{item.id}}' value="{{item.time}}"/>
-</block>
+<van-cell class="center" title="查看意见建议" is-link link-type="navigateTo"
+  url='../check_stu/check_stu'/>
+  <van-cell class="center" title="服务协议" is-link />
 <view class="footer">
 <van-tabbar active="{{active}}" bind:change="onChange">
   <van-tabbar-item icon="home-o">首页</van-tabbar-item>

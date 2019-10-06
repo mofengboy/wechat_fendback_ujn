@@ -7,7 +7,8 @@
     "pages/auth/auth",
     "pages/check/check",
     "pages/personal/personal",
-    "pages/personal_stu/personal"
+    "pages/personal_stu/personal",
+    "pages/check_stu/check_stu"
   ],
   "window": {
     "backgroundTextStyle": "light",
