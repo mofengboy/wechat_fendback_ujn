@@ -1,6 +1,7 @@
 <!--pages/personal/personal.wxml-->
 <view class='leave'>
 <image class="bg" src="https://suggestion.ujnxgzx.com/static/img/index_bg.jpg"></image>
+<view class="cut"></view>
  <view class='person'>
     <view class='headimage'>
       <image src='{{userInfo.avatarUrl}}'></image>

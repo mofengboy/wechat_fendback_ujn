@@ -13,9 +13,10 @@
   background-color: white;
   border-radius: 5px 5px 5px 5px;
   display: flex;
-  margin-top: 5rpx;
 }
-
+.cut{
+  padding: 25rpx 0;
+}
 .headimage {
    width: 90rpx;
   height: 90rpx;

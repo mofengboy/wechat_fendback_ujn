@@ -5,7 +5,9 @@ Page({
    * 页面的初始数据
    */
   data: {
-
+    info:{
+      reply:"za"
+    }
   },
 
   /**
@@ -29,6 +31,9 @@ Page({
           success: res => {
             console.log(res);
             let info = res.data.data;
+            if(!info.reply_status){
+              info.reply = "暂无回复！"
+            }
             _this.setData({
               info: info
             });
