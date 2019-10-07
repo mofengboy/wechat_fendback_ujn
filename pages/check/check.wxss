@@ -18,6 +18,7 @@
   height: 90%;
   margin: auto;
   padding-top:1em;
+  overflow:scroll;
 }
 .back{
   width: 80%;
