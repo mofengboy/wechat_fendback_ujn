@@ -7,7 +7,7 @@
       <image src='{{userInfo.avatarUrl}}'></image>
     </view>
     <view class='student'>
-      <view class='name'>{{userInfo.nickName}}
+      <view class='name'>{{real_Name}}
         </view>
       <view class='role'>老师</view>
     </view>

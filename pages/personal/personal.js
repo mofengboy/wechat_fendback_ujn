@@ -6,7 +6,8 @@ Page({
    */
   data: {
     active: 1,
-    content: ''
+    content: '',
+    real_Name:'',
   },
   /**
    * 自定义函数
@@ -34,17 +35,17 @@ Page({
       success: res => {
         console.log(this.data)
         wx.request({
-          url: 'https://suggestion.ujnxgzx.com/user/teacher/getAllReply',
+          url: 'https://suggestion.ujnxgzx.com/index/index/getUserMoreInfo',
           method: 'GET',
           header: {
             "session": res.data
           },
           success: res => {
-            console.log(res);
-            let info = res.data.data;
-            _this.setData({
-              info: info
-            });
+            console.log(res); 
+            this.setData({
+              real_Name: res.data.data.name
+            })
+            console.log(this.real_Name);
           }
         })
       }
