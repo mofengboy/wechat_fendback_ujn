@@ -6,6 +6,9 @@
   background-size:100% 100%;
   z-index: -1;
 }
+.cut{
+  padding: 25rpx 0;
+}
 .person {
   width: 92%;
   height: 14vh;

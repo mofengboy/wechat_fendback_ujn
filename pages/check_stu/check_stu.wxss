@@ -6,6 +6,9 @@
   background-size:100% 100%;
   z-index: -1;
 }
+.cut{
+  padding: 25rpx 0;
+}
 .center {
   width: 92%;
   margin:5rpx  4%;

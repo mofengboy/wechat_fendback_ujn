@@ -1,6 +1,7 @@
 <!--pages/personal/personal.wxml-->
 <view class='leave'>
 <image class="bg" src="https://suggestion.ujnxgzx.com/static/img/index_bg.jpg"></image>
+<view class="cut"></view>
  <view class='person'>
     <view class='headimage'>
       <image src='{{userInfo.avatarUrl}}'></image>
@@ -13,6 +14,7 @@
   </view>
 <van-cell class="center" title="查看所有回复" is-link link-type="navigateTo"
   url='../details/details'/>
+  <van-cell class="center" title="服务协议" is-link />
 <view class="footer">
 <van-tabbar active="{{active}}" bind:change="onChange">
   <van-tabbar-item icon="home-o">首页</van-tabbar-item>

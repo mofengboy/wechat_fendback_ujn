@@ -1,6 +1,7 @@
 <!--pages/check_stu/check_stu.wxml-->
 <view class='leave'>
 <image class="bg" src="https://suggestion.ujnxgzx.com/static/img/index_bg.jpg"></image>
+<view class="cut"></view>
 <block  wx:for="{{info}}" wx:key="{{item.id}}">
 <van-cell class="center" title="{{item.title}}" is-link link-type="navigateTo"
   url='../reply_received/reply_received?id={{item.id}}' value="{{item.time}}"/>
