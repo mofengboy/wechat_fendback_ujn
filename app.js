@@ -22,7 +22,7 @@ App({
                   let encryptedData = res.encryptedData;
                   let iv = res.iv;
                   wx.request({
-                    url: 'http://suggestion.ujnxgzx.com/wxlogin/index/login',
+                    url: 'https://suggestion.ujnxgzx.com/wxlogin/index/login',
                     method: "POST",
                     header: {
                       'content-type': 'application/json'

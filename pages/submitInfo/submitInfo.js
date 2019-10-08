@@ -35,7 +35,7 @@ Page({
       success: function(res) {
         let session  = res.data;
         wx.request({
-          url: 'http://suggestion.ujnxgzx.com/index/index/testing',
+          url: 'https://suggestion.ujnxgzx.com/index/index/testing',
           method:"GET",
           header:{
             'session':session
