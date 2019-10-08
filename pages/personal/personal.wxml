@@ -14,7 +14,8 @@
   </view>
 <van-cell class="center" title="查看所有回复" is-link link-type="navigateTo"
   url='../details/details'/>
-  <van-cell class="center" title="服务协议" is-link />
+  <van-cell class="center" title="服务协议" is-link link-type="navigateTo"
+  url='../agreement/agreement'/>
 <view class="footer">
 <van-tabbar active="{{active}}" bind:change="onChange">
   <van-tabbar-item icon="home-o">首页</van-tabbar-item>

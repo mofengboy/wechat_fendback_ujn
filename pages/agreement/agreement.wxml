@@ -1,2 +1,37 @@
 <!--pages/agreement/agreement.wxml-->
-<text>pages/agreement/agreement.wxml</text>
+<scroll-view scroll-y="true" class="container notify withtab">
+<image class="bg" src="https://suggestion.ujnxgzx.com/static/img/index_bg.jpg"></image>
+  <view class="ctnt0">
+    <view class="notify-item flex-wrp" >
+      <view class="notify-content flex-item">
+        <text class="notify-source"> 服务协议</text>
+        <text class="notify-title">1、服务协议的确认和接纳</text>
+        <text class="notify-title"> 本小程序的各项内容和服务的所有权归本小程序注册认证主体所有。用户在接受本服务之前，请务必仔细阅读本协议。用户使用服务，或通过完成注册、登陆程序,表示用户接受所有服务协议。</text>
+        <text class="notify-title">2、用户同意:</text>
+        <text class="notify-title"> (1)提供准确的个人资料。如果用户提供的资料不准确,本小程序有结束服务的权利。本小程序将不公开用户的姓名、地址、电子邮箱、帐号等信息。</text>
+        <text class="notify-title"> (2)本小程序意见反馈采用匿名制，要求提供的学号和姓名仅用作身份认证。</text>
+        <text class="notify-title">3、用户在使用小程序的任何行为必须遵循:</text>
+        <text class="notify-title"> (1)不使用本小程序张贴、传送或以其它方式传播任何非法的、有害的、恐吓性的、骚扰性的、中伤他人的、辱骂性的、庸俗淫秽的、涉及他人隐私的、种族歧视的、不道德的内容。</text>
+        <text class="notify-title"> (2)通过本小程序张贴、传送的内容不违反有关法律规定,并且不能侵犯任何人的专利权、商标权、商业秘密、版权或其他知识产权。</text>
+         <text class="notify-title"> (3)不干扰或混乱网络服务。</text>
+          <text class="notify-title"> (4)不使用本小程序传输或散布涉及国家安全、政治、宗教、种族、色情等内容的信息资料。</text>
+           <text class="notify-title"> (5)用户使用小程序过程中如果存在冒领或者恶意提交行为,小程序所有者有权停止对该用户的服务。</text>
+           <text class="notify-title">4、用户的帐号、密码和安全性</text>
+           <text class="notify-title"> 本小程序使用微信用户登陆，一旦使用微信授权登陆,视为注册成功且登陆成功。用户将对微信账户的安全负全部责任。另外,每个用户都要对以其用户进行的所有活动和事件负全责。用户若发现任何非法使用用户帐号或存在安全漏洞的情况,请立即修改您的微信账号密码。</text>
+           <text class="notify-title">5、拒绝提供担保</text>
+           <text class="notify-title"> 用户明确同意使用本公司服务,由用户个人承担凤险。用户理解并接受:任何通过服务取得的信息资料的可靠性有用性取决于用户自己的判断,用户自行承担所有风险和责任。请用户提高警惕,谨防上当受骗。</text>
+            <text class="notify-title">6、有限责任</text>
+            <text class="notify-title"> 本小程序对任何由于使用服务引发的直接、间接、偶然及继起的损害不负责任。这些损害可能来自(包括但不限于) :不正当使用服务,或传送的信息不符合规定等。</text>
+            <text class="notify-title">7、对用户信息的存储和限制</text>
+            <text class="notify-title"> 本小程序不对用户发布信息的删除或储存失败负责,本小程序有判定用户的行为是否符合服务协议的要求和精神的保留权利。如果用户违背了服务协议的规定，有中断对其提供服务的权利。</text>
+            <text class="notify-title">  8、结束服务</text>
+            <text class="notify-title"> 本小程序可随时根据实际情况中断一项或多项服务,不需对任何个人或第三方负责或知会。同时用户若反对任何服务协议的建议或对后来的协议修改有异议,或对服务不满,用户可以行使如下权利:</text>
+            <text class="notify-title"> (1)不再使用本小程序的服务。</text>
+            <text class="notify-title"> (2)通知本小程序注册认证主体停止对该用户的服务。</text>
+            <text class="notify-title">9、适用法律</text>
+            <text class="notify-title"> 上述协议将适用中华人民共和国的法律,所有的争端将诉诸于本网所在地的人民法院。如发生服务协议与中华人民共和国法律相抵触时，则这些协议将完全按法律规定重新解释,而其他协议则依旧保持约束力。</text>
+            <text class="notify-title">10、一旦您使用了本小程序的服务，就表明您已经完全接受了本用户协议。</text>
+      </view>
+    </view>
+  </view>
+</scroll-view>
