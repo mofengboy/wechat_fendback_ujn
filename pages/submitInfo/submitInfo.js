@@ -45,7 +45,6 @@ Page({
             name: _this.data.name
           },
           success(res){
-            console.log(res);
             if(res.data.statusCode==200){
               wx.navigateTo({
                 url: '/pages/index/index',

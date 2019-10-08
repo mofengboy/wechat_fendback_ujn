@@ -12,7 +12,6 @@ Page({
    * 
    */
   wx_auth:function(){
-    console.log("11")
     wx.authorize({
       scope: 'scope.userInfo',
       success() {

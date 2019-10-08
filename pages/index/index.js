@@ -48,12 +48,14 @@ Page({
             'session': res.data
           },
           success(res) {
+            console.log(res);s
             // 未选择身份返回授权页面
-            if (res.data.statusCode != 200) {
+            if (res.data.statusCode != 200) {s
               wx.navigateTo({
                 url: '/pages/auth/auth',
               })
             }
+            
           }
         })
       },

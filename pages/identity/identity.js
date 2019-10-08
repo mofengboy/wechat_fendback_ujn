@@ -35,14 +35,17 @@ Page({
             'type': _this.data.identity
           },
           success(res){
-
-            if(res.statusCode==200){
-             
-              wx.navigateTo({
-                url: '/pages/submitInfo/submitInfo',
-              })
+            // 身份是学生
+            if (_this.data.identity==1){
+              if (res.statusCode == 200) {
+                wx.navigateTo({
+                  url: '/pages/submitInfo/submitInfo',
+                })
+              }
+            }else{
+              // 老师身份审核
+              Toast('你选择的身份是老师，已经提交审核请等待！');
             }
-            
           }
         })
       },
