@@ -1,4 +1,5 @@
 // pages/submitInfo/submitInfo.js
+import Dialog from '../../miniprogram_npm/vant-weapp/dialog/dialog';
 Page({
 
   /**
@@ -45,9 +46,16 @@ Page({
           },
           success(res){
             console.log(res);
-            wx.navigateTo({
-              url: '/pages/index/index',
-            })
+            if(res.data.statusCode==200){
+              wx.navigateTo({
+                url: '/pages/index/index',
+              })
+            }else{
+              Dialog.alert({
+                title: '验证错误',
+                message: '请核对你的姓名与学号！'
+              })
+            }
           }
         })
       },

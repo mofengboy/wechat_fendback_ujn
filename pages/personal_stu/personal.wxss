@@ -59,3 +59,11 @@
   display: flex;
   margin-top: 5rpx;
 }
+.copyright{
+  margin: 0 auto;
+  width: 750rpx;
+  font-size: 28rpx;
+  text-align: center;
+  position: fixed;
+  bottom: 110rpx;
+}

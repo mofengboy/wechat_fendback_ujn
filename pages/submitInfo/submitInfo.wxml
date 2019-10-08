@@ -1,5 +1,6 @@
 <!--pages/identity/identity.wxml-->
 <view>
+<van-dialog id="van-dialog" />
 <image class="bg" src="https://suggestion.ujnxgzx.com/static/img/bg1.jpg"></image>
 <view class="header">
 </view>
