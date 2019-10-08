@@ -8,7 +8,8 @@
     "pages/check/check",
     "pages/personal/personal",
     "pages/personal_stu/personal",
-    "pages/check_stu/check_stu"
+    "pages/check_stu/check_stu",
+    "pages/agreement/agreement"
   ],
   "window": {
     "backgroundTextStyle": "light",
