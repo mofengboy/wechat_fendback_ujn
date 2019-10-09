@@ -3,7 +3,7 @@
 <h1>意见回复：</h1>
 <form bindsubmit='confirm' class="back" >
 <view class="bk" >
-  <textarea name = "content" class="textarea" placeholder="请输入：" maxlength='500' bindblur='bindTextAreaBlur' value='{{content}}'>
+  <textarea name = "content" class="textarea" placeholder="请输入：" maxlength='500' bindinput='bindTextAreaBlur' value='{{content}}'>
   </textarea>
   </view>
   <view class="btn">

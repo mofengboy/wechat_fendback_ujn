@@ -13,7 +13,6 @@ Page({
    * 
    */
   bindTextAreaBlur: function (e) {
-    console.log(e.detail.value)
     let content = e.detail.value;
     this.setData({
       content: content
@@ -25,8 +24,7 @@ Page({
     wx.getStorage({
       key: 'session',
       success: res => {
-        console.log(_this.data);
-        console.log(this.data.content);
+  
         if (this.data.content){
         wx.request({
           url: 'https://suggestion.ujnxgzx.com/user/teacher/replaySuggestion',

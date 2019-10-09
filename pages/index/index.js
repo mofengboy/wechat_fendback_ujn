@@ -162,6 +162,11 @@ Page({
    */
   onLoad: function (options) {
     let _this = this;
+    /*
+     * 检测用户是否选择身份
+     */
+    this.judgeIfSelect();
+
     
 
   },
@@ -170,15 +175,7 @@ Page({
    * 生命周期函数--监听页面初次渲染完成
    */
   onReady: function () {
-    /*
-     * 检测用户是否选择身份
-     */
-    this.judgeIfSelect();
-
-    /*
-    * 处理用户身份
-    */
-    this.checkUserType();
+    
     
   },
 
@@ -186,7 +183,10 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-
+    /*
+        * 处理用户身份
+        */
+    this.checkUserType();
   },
 
   /**

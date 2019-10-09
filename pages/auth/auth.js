@@ -24,6 +24,10 @@ Page({
         console.log("未授权")
       }
     })  
+    // 跳转身份选择页面
+        wx.navigateTo({
+          url: '/pages/identity/identity',
+        })
   },
 
   /**
