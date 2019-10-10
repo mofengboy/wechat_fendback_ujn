@@ -25,7 +25,7 @@ Page({
       }
     })  
     // 跳转身份选择页面
-        wx.navigateTo({
+    wx.navigateTo({
           url: '/pages/identity/identity',
         })
   },

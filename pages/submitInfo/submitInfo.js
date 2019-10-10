@@ -46,7 +46,7 @@ Page({
           },
           success(res){
             if(res.data.statusCode==200){
-              wx.navigateTo({
+              wx.redirectTo({
                 url: '/pages/index/index',
               })
             }else{

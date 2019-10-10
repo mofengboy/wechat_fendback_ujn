@@ -38,7 +38,7 @@ Page({
             // 身份是学生
             if (_this.data.identity==1){
               if (res.statusCode == 200) {
-                wx.navigateTo({
+                wx.redirectTo({
                   url: '/pages/submitInfo/submitInfo',
                 })
               }
@@ -91,6 +91,7 @@ Page({
  /*
    * 检测是否已经选择身份
    */
+
                 wx.request({
                   url: 'https://suggestion.ujnxgzx.com/index/index/judgeIfSelect',
                   method: "GET",
@@ -98,11 +99,11 @@ Page({
                     'session': session
                   },
                   success(res) {
-                    console.log(res)
+                    console.log(res);
                     // 已经选择身份跳转首页
                     if (res.data.statusCode == 200) {
                       Toast('你已经进行身份认证，正在跳转首页');
-                      wx.navigateTo({
+                      wx.redirectTo({
                         url: '/pages/index/index',
                       })
                     }
