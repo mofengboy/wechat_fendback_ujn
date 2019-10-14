@@ -19,8 +19,22 @@ Page({
    * 
    */
   // event.detail 的值为当前选中项的索引
-  onChange(event) {
-    console.log(event.detail);
+  onChange: function (e) {
+    let jumpUrl = "/pages/index/index";
+    switch (e.detail) {
+      case 0: jumpUrl = "/pages/index/index";
+        break;
+      case 1: jumpUrl = "/pages/common/common";
+       break;
+      case 2: if (this.data.is_teacher == true) {
+        jumpUrl = "/pages/personal/personal";
+      } else
+        jumpUrl = "/pages/personal_stu/personal";
+        break;
+    }
+    wx.reLaunch({
+      url: jumpUrl,
+    })
   },
 
   // 实时改变输入到data的数据
@@ -223,19 +237,5 @@ Page({
   onShareAppMessage: function () {
 
   },
-  onChange: function (e) {
-    let jumpUrl = "/pages/index/index";
-    switch (e.detail) {
-      case 0: jumpUrl = "/pages/index/index";
-        break;
-      case 1: if(this.data.is_teacher == true){
-        jumpUrl = "/pages/personal/personal";
-        }else
-        jumpUrl = "/pages/personal_stu/personal";
-        break;
-    }
-    wx.reLaunch({
-      url: jumpUrl,
-    })
-  }
+  
 })

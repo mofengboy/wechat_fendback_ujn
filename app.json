@@ -9,7 +9,8 @@
     "pages/personal/personal",
     "pages/personal_stu/personal",
     "pages/check_stu/check_stu",
-    "pages/agreement/agreement"
+    "pages/agreement/agreement",
+    "pages/common/common"
   ],
   "window": {
     "backgroundTextStyle": "light",

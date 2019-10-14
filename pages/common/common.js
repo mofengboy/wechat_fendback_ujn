@@ -1,18 +1,16 @@
-// pages/personal/personal.js
+// pages/common/common.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    active: 2,
-    content: '',
-    real_Name:'',
+    active: 1,
   },
   /**
-   * 自定义函数
-   * 
-   */
+     * 自定义函数
+     * 
+     */
   onChange: function (e) {
     let jumpUrl = "/pages/index/index";
     switch (e.detail) {
@@ -30,42 +28,12 @@ Page({
       url: jumpUrl,
     })
   },
-
+  
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    var that = this;
-    wx.getUserInfo({
-      success(res) {
-        console.log(res);
-        that.setData({
-          userInfo: res.userInfo,
-          nickName: res.userInfo.nickName
-        })
-      }
-    })
-    let _this = this;
-    wx.getStorage({
-      key: 'session',
-      success: res => {
-        console.log(this.data)
-        wx.request({
-          url: 'https://suggestion.ujnxgzx.com/index/index/getUserMoreInfo',
-          method: 'GET',
-          header: {
-            "session": res.data
-          },
-          success: res => {
-            console.log(res); 
-            this.setData({
-              real_Name: res.data.data.name
-            })
-            console.log(this.real_Name);
-          }
-        })
-      }
-    })
+
   },
 
   /**
@@ -115,6 +83,5 @@ Page({
    */
   onShareAppMessage: function () {
 
-  },
-  
+  }
 })

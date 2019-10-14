@@ -12,7 +12,23 @@ Page({
    * 自定义函数
    * 
    */
-
+  onChange: function (e) {
+    let jumpUrl = "/pages/index/index";
+    switch (e.detail) {
+      case 0: jumpUrl = "/pages/index/index";
+        break;
+      case 1: jumpUrl = "/pages/common/common";
+        break;
+      case 2: if (this.data.is_teacher == true) {
+        jumpUrl = "/pages/personal/personal";
+      } else
+        jumpUrl = "/pages/personal_stu/personal";
+        break;
+    }
+    wx.reLaunch({
+      url: jumpUrl,
+    })
+  },
 
   /**
    * 生命周期函数--监听页面加载
@@ -21,7 +37,6 @@ Page({
     var that = this;
     wx.getUserInfo({
       success(res) {
-        console.log(res);
         that.setData({
           userInfo: res.userInfo,
           nickName: res.userInfo.nickName
@@ -31,7 +46,6 @@ Page({
     wx.getStorage({
       key: 'session',
       success: res => {
-        console.log(this.data)
         wx.request({
           url: 'https://suggestion.ujnxgzx.com/index/index/getUserMoreInfo',
           method: 'GET',
@@ -43,7 +57,6 @@ Page({
             this.setData({
               real_Name: res.data.data.name
             })
-            console.log(this.real_Name);
           }
         })
       }
@@ -99,18 +112,5 @@ Page({
   onShareAppMessage: function () {
 
   },
-
-  onChange: function (e) {
-    let jumpUrl = "/pages/personal/personal";
-    switch (e.detail) {
-      case 0: jumpUrl = "/pages/index/index";
-        break;
-      case 1: jumpUrl = "/pages/personal/personal";
-        break;
-    }
-    wx.reLaunch({
-      url: jumpUrl,
-    })
-  }
   
 })

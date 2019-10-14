@@ -20,6 +20,7 @@
 <view class="footer">
 <van-tabbar active="{{active}}" bind:change="onChange">
   <van-tabbar-item icon="home-o">首页</van-tabbar-item>
+  <van-tabbar-item icon="question-o">常见问题</van-tabbar-item>
   <van-tabbar-item icon="user-o">我的</van-tabbar-item>
 </van-tabbar>
 </view>
