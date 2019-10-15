@@ -1,0 +1,8 @@
+<view class='leave'>
+<image class="bg" src="https://suggestion.ujnxgzx.com/static/img/index_bg.jpg"></image>
+<view class="main">
+<van-panel title="{{info.question}}">
+  <view class="content">{{info.answer}}</view>
+</van-panel>
+</view>
+</view>

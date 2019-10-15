@@ -1,48 +1,48 @@
-// pages/check/check.js
+// pages/common_replay/common_replay.js
 Page({
-  
+
   /**
    * 页面的初始数据
    */
   data: {
-    title:'',
-    suggestion:'',
-    reply_id:'',
-
+    id:'',
+    info:''
   },
 
+  question: function () {
+    let _this = this;
+    wx.getStorage({
+      key: 'session',
+      success: function (res) {
+        wx.request({
+          url: 'https://suggestion.ujnxgzx.com/index/index/getSinglePublic',
+          method: "GET",
+          header: {
+            'session': res.data
+          },
+          data:{
+            id:_this.data.id
+          },
+          success(res) {
+            let info = res.data.data;
+            console.log(info);
+            _this.setData({
+              info: info
+            })
+          }
+        })
+      },
+    })
+
+  },
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-      let _this = this;
-      wx.getStorage({
-        key: 'session',
-        success: res => {
-          wx.request({
-            url: 'https://suggestion.ujnxgzx.com/user/teacher/getSingleNoReply',
-            method: 'GET',
-            header: {
-              "session": res.data
-            },
-            data: {
-              id: options.id,
-            },
-            success: res => {
-              this.reply_id = options.id;
-              let info = res.data.data;
-              _this.setData({
-                info: info
-              });
-            }
-          })
-        }
-      })
-  },
-  reply: function () {
-    wx.navigateTo({
-      url: '/pages/reply/reply?id=' + this.reply_id,
+    this.setData({
+      id:options.id
     })
+
   },
 
   /**
@@ -56,7 +56,7 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-
+    this.question();
   },
 
   /**

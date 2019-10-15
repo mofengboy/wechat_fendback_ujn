@@ -1,6 +1,15 @@
 <view>
+<image class="bg" src="https://suggestion.ujnxgzx.com/static/img/index_bg.jpg"></image>
 <view class="list">
-
+<view class="list_title">
+常见问题及回复
+</view>
+<view class="list_main">
+<block wx:for="{{info}}" wx:key="{{item.id}}">
+<van-cell  class="list_item" title="{{item.question}}" is-link link-type="navigateTo"
+  url='../common_replay/common_replay?id={{item.id}}' value="查看回答" />
+</block>
+</view>
 </view>
 <view class="footer">
 <van-tabbar active="{{active}}" bind:change="onChange">

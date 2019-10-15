@@ -6,6 +6,7 @@ Page({
    */
   data: {
     active: 1,
+    info:''
   },
   /**
      * 自定义函数
@@ -29,11 +30,39 @@ Page({
     })
   },
   
+
+/**
+ * 常见问题
+ */
+question:function(){
+  let _this = this;
+  wx.getStorage({
+    key: 'session',
+    success: function (res) {
+      wx.request({
+        url: 'https://suggestion.ujnxgzx.com/index/index/getPublicList',
+        method: "GET",
+        header: {
+          'session': res.data
+        },
+        success(res) {
+          let info = res.data.data;
+          console.log(info);
+          _this.setData({
+            info:info
+          })
+        }
+      })
+    },
+  })
+  
+},
+
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    
   },
 
   /**
@@ -47,7 +76,7 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-
+    this.question();
   },
 
   /**
