@@ -38,7 +38,6 @@ Page({
     var that = this;
     wx.getUserInfo({
       success(res) {
-        console.log(res);
         that.setData({
           userInfo: res.userInfo,
           nickName: res.userInfo.nickName
@@ -49,7 +48,6 @@ Page({
     wx.getStorage({
       key: 'session',
       success: res => {
-        console.log(this.data)
         wx.request({
           url: 'https://suggestion.ujnxgzx.com/index/index/getUserMoreInfo',
           method: 'GET',
@@ -57,11 +55,9 @@ Page({
             "session": res.data
           },
           success: res => {
-            console.log(res); 
             this.setData({
               real_Name: res.data.data.name
             })
-            console.log(this.real_Name);
           }
         })
       }

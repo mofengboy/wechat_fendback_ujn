@@ -6,7 +6,41 @@ Page({
    */
   data: {
     active: 1,
-    info:''
+    info:'',
+    is_teacher:false
+  },
+    /*
+   * 判断用户类型并选择返回类型
+   */
+  checkUserType:function(){
+    let _this = this;
+    wx.getStorage({
+      key: 'session',
+      success: function (res) {
+        wx.request({
+          url: 'https://suggestion.ujnxgzx.com/index/index/getUserMoreInfo',
+          method: "GET",
+          header: {
+            'session': res.data
+          },
+          success: function (res) {
+            let user_type = res.data.data.user_type;
+            // 获取老师未回复建议
+            if (user_type == 2) {
+              _this.setData({
+                is_teacher:true
+              });
+            }
+            // 学生提交建议
+            if(user_type==1){
+              _this.setData({
+                is_teacher: false
+              });
+            }
+          }
+        })
+      },
+    })
   },
   /**
      * 自定义函数
@@ -30,7 +64,40 @@ Page({
     })
   },
   
+  /*
+   * 判断用户类型并选择返回类型
+   */
+  checkUserType: function () {
+    let _this = this;
+    wx.getStorage({
+      key: 'session',
+      success: function (res) {
+        wx.request({
+          url: 'https://suggestion.ujnxgzx.com/index/index/getUserMoreInfo',
+          method: "GET",
+          header: {
+            'session': res.data
+          },
+          success: function (res) {
+            let user_type = res.data.data.user_type;
+            // 获取老师未回复建议
+            if (user_type == 2) {
+              _this.setData({
+                is_teacher: true
+              });
+            }
+            // 学生提交建议
+            if (user_type == 1) {
+              _this.setData({
+                is_teacher: false
+              });
 
+            }
+          }
+        })
+      },
+    })
+  },
 /**
  * 常见问题
  */
@@ -47,7 +114,6 @@ question:function(){
         },
         success(res) {
           let info = res.data.data;
-          console.log(info);
           _this.setData({
             info:info
           })
@@ -62,7 +128,7 @@ question:function(){
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    
+    this.checkUserType()
   },
 
   /**
